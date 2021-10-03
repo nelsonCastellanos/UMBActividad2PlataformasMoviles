@@ -18,4 +18,8 @@
     <string name="teacher_name">"Mendez Lara Jhon Alexis\t "</string>
     <string name="umb_logo">Umb Logo de universidad</string>
     <string name="title_activity_main2">MainActivity2</string>
+    <string name="redirectsearch">Buscador UMB</string>
+    <string name="umb">UMB</string>
+    <string name="redirect_button">Vamos!</string>
+    <string name="umb_description">Bienvenidos a la Universidad Manuela Beltrán, una institución de Educación Superior con Acreditación de Alta Calidad Institucional Multicampus. Llevamos 44 años comprometidos con la formación de profesionales íntegros que aportan al desarrollo sostenible de nuestro país.</string>
 </resources>

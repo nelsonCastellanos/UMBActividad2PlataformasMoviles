@@ -1,29 +1,26 @@
-package com.umb.umbactividad2plataformasmoviles.ui.home;
+package com.umb.umbactividad2plataformasmoviles.ui.redirect;
 
+import android.app.Dialog;
+import android.content.Intent;
+import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 
-import com.umb.umbactividad2plataformasmoviles.R;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
 import com.umb.umbactividad2plataformasmoviles.databinding.FragmentHomeBinding;
 
-public class HomeFragment extends Fragment {
+public class Redirect extends Fragment {
 
-    private HomeViewModel homeViewModel;
     private FragmentHomeBinding binding;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
@@ -34,5 +31,10 @@ public class HomeFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+    public void goUmb(View view) {
+         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://umb.edu.co/"));
+                        startActivity(browserIntent);
     }
 }
