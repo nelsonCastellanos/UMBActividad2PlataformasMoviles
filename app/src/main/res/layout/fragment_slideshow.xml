@@ -15,7 +15,7 @@
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_margin="20dp">
 
@@ -30,14 +30,15 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
 
 
-
             <EditText
                 android:id="@+id/editTextTextPersonName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Nombres" />
+                android:minHeight="48dp"
+                android:hint="Nombres"
+                android:importantForAutofill="no" />
 
             <EditText
                 android:id="@+id/editTextTextPersonLastName"
@@ -46,7 +47,8 @@
                 android:layout_marginBottom="20dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Apellidos" />
+                android:minHeight="48dp"
+                android:hint="Apellidos" />
 
             <EditText
                 android:id="@+id/editTextNumber"
@@ -54,7 +56,9 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="number"
-                android:text="Edad"/>
+                android:minHeight="48dp"
+                android:hint="Edad"
+                android:autofillHints="" />
 
             <Button
                 android:id="@+id/button"
@@ -62,7 +66,9 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="15dp"
                 android:padding="10dp"
-                android:text="Registrar" />
+                android:text="Registrar"
+
+                />
 
 
               <TextView

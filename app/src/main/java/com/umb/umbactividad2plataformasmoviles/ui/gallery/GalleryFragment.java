@@ -1,10 +1,16 @@
 package com.umb.umbactividad2plataformasmoviles.ui.gallery;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.URLUtil;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,7 +33,20 @@ public class GalleryFragment extends Fragment {
 
         binding = FragmentGalleryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
+        Button button = root.findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                EditText url =  root.findViewById(R.id.searchUrl);
+                if(URLUtil.isValidUrl(url.getText().toString())){
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url.getText().toString()));
+                        startActivity(browserIntent);
+                }else{
+                    Toast.makeText(binding.getRoot().getContext(), "La url no es correcta.",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
         return root;
     }
 
